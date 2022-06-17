@@ -1,0 +1,5 @@
+#caja {
+    -fx-border-color: black;
+    -fx-border-width: .5; 
+    -fx-border-style: segments(2, 2, 2, 2)  line-cap round;
+}
