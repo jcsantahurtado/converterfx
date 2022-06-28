@@ -6,9 +6,9 @@ _Edición #1: Challenge Oracle ONE Java, un proyecto creado usando la plataforma
 
 #### Se tendrá esta presentación al ejecutar el proyecto en Eclipse:
 
-<p><img width="600" src="https://user-images.githubusercontent.com/60399697/174407601-675271f8-ce97-4500-a7d8-176828422a75.png"></p>
+<p><img width="600" src="https://user-images.githubusercontent.com/60399697/176170904-86008cc1-3bf6-4fec-b272-f72827b2a574.png"></p>
 
-<p><img width="600" src="https://user-images.githubusercontent.com/60399697/174407957-0f09eb05-90fc-473f-9938-e7af6a122a97.png"></p>
+<p><img width="600" src="https://user-images.githubusercontent.com/60399697/176171272-6a10fab8-8fc7-43a6-99d4-3ca5fd8a310a.png"></p>
 
 ## Construido con 🛠️
 
