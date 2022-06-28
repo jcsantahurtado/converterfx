@@ -13,16 +13,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.challenge5.converter.controller.SecondaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #EDEDED;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.challenge5.converter.controller.SecondaryController">
    <children>
-      <Label layoutX="291.0" layoutY="14.0" style="-fx-text-fill: #2596be;" text="CONVERSIÓN RÁPIDA" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label layoutY="23.0" style="-fx-text-fill: #2596be;" text="CONVERSIÓN RÁPIDA" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font size="24.0" />
          </font>
          <padding>
             <Insets left="45.0" right="45.0" />
          </padding></Label>
-      <Label layoutY="61.0" prefHeight="16.0" prefWidth="704.0" text="¡Bienvenido, este es la solución al primer Challenge Java del programa ONE!" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label layoutY="70.0" prefHeight="16.0" prefWidth="704.0" text="¡Bienvenido, este es la solución al primer Challenge Java del programa ONE!" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font size="16.0" />
          </font>
@@ -30,7 +30,7 @@
             <Insets left="45.0" right="45.0" />
          </padding>
       </Label>
-      <VBox fx:id="caja" layoutX="38.0" layoutY="106.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0" AnchorPane.leftAnchor="40.0">
+      <VBox fx:id="caja" layoutX="40.0" layoutY="115.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0" AnchorPane.leftAnchor="40.0">
          <children>
             <Label style="-fx-text-fill: #2596be;" text="Moneda">
                <font>
@@ -53,9 +53,9 @@
                </VBox.margin>
             </Label>
             <ComboBox fx:id="cbxAMoneda" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eef2ff;">
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EAF2FD;">
                <children>
-                  <Button fx:id="intercambiarMoneda" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #eef2ff; -fx-border-style: none;">
+                  <Button fx:id="intercambiarMoneda" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #EAF2FD; -fx-border-style: none;">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -86,7 +86,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <VBox fx:id="caja" layoutX="290.0" layoutY="106.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0">
+      <VBox fx:id="caja" layoutX="290.0" layoutY="115.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0">
          <children>
             <Label style="-fx-text-fill: #2596be;" text="Temperatura">
                <font>
@@ -110,9 +110,9 @@
                </VBox.margin>
             </Label>
             <ComboBox fx:id="cbxATemperatura" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eef2ff;">
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EAF2FD;">
                <children>
-                  <Button fx:id="intercambiarTemperatura" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #eef2ff; -fx-border-style: none;">
+                  <Button fx:id="intercambiarTemperatura" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #EAF2FD; -fx-border-style: none;">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -144,7 +144,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <VBox fx:id="caja" layoutX="561.0" layoutY="106.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0" AnchorPane.rightAnchor="40.0">
+      <VBox fx:id="caja" layoutX="540.0" layoutY="115.0" prefHeight="265.0" prefWidth="220.0" spacing="10.0" AnchorPane.rightAnchor="40.0">
          <children>
             <Label style="-fx-text-fill: #2596be;" text="Almacenamiento">
                <font>
@@ -168,9 +168,9 @@
                </VBox.margin>
             </Label>
             <ComboBox fx:id="cbxAAlmacenamiento" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eef2ff;">
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #EAF2FD;">
                <children>
-                  <Button fx:id="intercambiarAlmacenamiento" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #eef2ff; -fx-border-style: none;">
+                  <Button fx:id="intercambiarAlmacenamiento" mnemonicParsing="false" onAction="#buttonCambiarOnAction" prefHeight="0.0" prefWidth="34.0" style="-fx-background-color: #EAF2FD; -fx-border-style: none;">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                            <image>
