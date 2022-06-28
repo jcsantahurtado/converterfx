@@ -41,7 +41,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField fx:id="entraMoneda" onKeyReleased="#txtFieldOnKeyReleased" prefHeight="24.0" prefWidth="107.0">
+            <TextField fx:id="entraMoneda" prefHeight="24.0" prefWidth="107.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -76,7 +76,7 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonConvertirMoneda" text="Convertir">
+            <Button fx:id="boton1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonConvertirMoneda" text="Convertir">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -98,7 +98,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField fx:id="entraTemperatura" onKeyReleased="#txtFieldOnKeyReleased" prefHeight="24.0" prefWidth="107.0">
+            <TextField fx:id="entraTemperatura" prefHeight="24.0" prefWidth="107.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -134,7 +134,7 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonConvertirTemperatura" text="Convertir">
+            <Button fx:id="boton2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#botonConvertirTemperatura" text="Convertir">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -156,7 +156,7 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField fx:id="entraAlmacenamiento" onKeyReleased="#txtFieldOnKeyReleased" prefHeight="24.0" prefWidth="107.0">
+            <TextField fx:id="entraAlmacenamiento" prefHeight="24.0" prefWidth="107.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>

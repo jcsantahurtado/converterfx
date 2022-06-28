@@ -13,7 +13,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 
 public class SecondaryController implements Initializable {
 
@@ -57,15 +56,26 @@ public class SecondaryController implements Initializable {
 	private String[] medidasTemperatura = { "Celsius", "Fahrenheit", "Kelvin" };
 	private String[] medidasAlmacenamiento = { "Kilobyte", "Megabyte", "Gigabyte", "Terabyte", "Petabyte" };
 
-	Alert alert = new Alert(Alert.AlertType.ERROR, "Hubo un error!");
-
 	@FXML
 	private void botonConvertirMoneda(ActionEvent event) {
 
-		Double cantidad = Double.parseDouble(entraMoneda.getText());
-		String from = cbxDeMoneda.getValue();
-		String to = cbxAMoneda.getValue();
+		if (entraMoneda.getText().isBlank()) {
+			return;
+		}
+
+		Double cantidad;
+		String from;
+		String to;
 		Double resultado;
+
+		cantidad = validaCampoCantidad(entraMoneda.getText());
+		from = cbxDeMoneda.getValue();
+		to = cbxAMoneda.getValue();
+
+		if (cantidad <= 0) {
+			resultadoConversionMoneda.setText("");
+			return;
+		}
 
 		Moneda moneda = new Moneda(cantidad, from, to);
 		moneda.hacerConversionMoneda();
@@ -78,10 +88,14 @@ public class SecondaryController implements Initializable {
 	@FXML
 	private void botonConvertirTemperatura(ActionEvent event) {
 
-		Double cantidad = Double.parseDouble(entraTemperatura.getText());
-		String from = cbxDeTemperatura.getValue();
-		String to = cbxATemperatura.getValue();
+		Double cantidad;
+		String from;
+		String to;
 		Double resultado;
+
+		cantidad = Double.parseDouble(entraTemperatura.getText());
+		from = cbxDeTemperatura.getValue();
+		to = cbxATemperatura.getValue();
 
 		Temperatura temperatura = new Temperatura(cantidad, from, to);
 		temperatura.hacerConversionTemperatura();
@@ -94,17 +108,35 @@ public class SecondaryController implements Initializable {
 	@FXML
 	private void botonConvertirAlmacenamiento(ActionEvent event) {
 
-		Alert alert = new Alert(Alert.AlertType.ERROR, "Esta opción esta deshabilitada.");
+		Alert alert = new Alert(Alert.AlertType.INFORMATION, "Esta opción esta deshabilitada.");
 		alert.showAndWait();
 
 	}
 
-	@FXML
-	private void txtFieldOnKeyReleased(KeyEvent event) {
+	private Double validaCampoCantidad(String txtEntraCantidad) {
 
-		resultadoConversionMoneda.setText("");
-		resultadoConversionTemperatura.setText("");
-		resultadoConversionAlmacenamiento.setText("");
+		Double cantidad;
+
+		try {
+
+			cantidad = Double.parseDouble(txtEntraCantidad);
+
+			if (cantidad <= 0) {
+				Alert alert = new Alert(Alert.AlertType.ERROR, "Ingrese una cantidad superior a 0");
+				alert.showAndWait();
+
+				cantidad = -.1;
+			}
+
+		} catch (Exception e) {
+
+			Alert alert = new Alert(Alert.AlertType.ERROR, "Ingrese una cantidad válida, solo números");
+			alert.showAndWait();
+
+			cantidad = .0;
+		}
+
+		return cantidad;
 
 	}
 
@@ -132,13 +164,13 @@ public class SecondaryController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		// Cargando opciones Monedas
+		// Loading options Currencies
 		inicializa(cbxDeMoneda, cbxAMoneda, medidasMoneda);
 
-		// Cargando opciones Temperatura
+		// Loading options Temperature
 		inicializa(cbxDeTemperatura, cbxATemperatura, medidasTemperatura);
 
-		// Cargando opciones de Almacenamiento
+		// Loading Storage options
 		inicializa(cbxDeAlmacenamiento, cbxAAlmacenamiento, medidasAlmacenamiento);
 
 	}
@@ -153,11 +185,11 @@ public class SecondaryController implements Initializable {
 
 	}
 
-	private void inicializa(ComboBox<String> de, ComboBox<String> a, String[] medidas) {
+	private void inicializa(ComboBox<String> de, ComboBox<String> a, String[] unidadesDeConversion) {
 
-		de.getItems().addAll(medidas);
+		de.getItems().addAll(unidadesDeConversion);
 		de.getSelectionModel().select(1);
-		a.getItems().addAll(medidas);
+		a.getItems().addAll(unidadesDeConversion);
 		a.getSelectionModel().select(0);
 
 	}
